@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agent Details"
+             android:textAlignment="center"
+             android:id="@+id/textview3"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">        
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agent Name: "
+            android:paddingLeft="7dip"
+            android:id="@+id/agent_name"/>
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="agent name"
+            android:paddingLeft="7dip"     
+            android:id="@+id/agentname"/>
+        </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">   
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agent Email: "
+            android:paddingLeft="7dip"
+            android:id="@+id/agent_email"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email"
+            android:paddingLeft="7dip"     
+            android:id="@+id/agentemail"/>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"> 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agent PhoneNumber: "
+            android:paddingLeft="7dip"
+            android:id="@+id/agent_phn"/>
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="agent phn"
+            android:paddingLeft="7dip"    
+            android:id="@+id/agentphn"/>
+        </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share  details via SMS"
+        android:id="@+id/agentsms"/>
+      <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share details via Bluetooth"
+        android:id="@+id/agentbluetooth"/>
+     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Agent Office"
+        android:id="@+id/agentoffice"/>
+      
+</LinearLayout>
