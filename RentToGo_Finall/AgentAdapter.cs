@@ -50,8 +50,5 @@ namespace RentToGo_Finall
             view.FindViewById<TextView>(Resource.Id.agentphn).Text = item.AgentPhnNumber.ToString();
             return view;
         }
-
-
-
     }
 }

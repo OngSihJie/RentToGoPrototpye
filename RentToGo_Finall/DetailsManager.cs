@@ -15,15 +15,15 @@ using System.Net.Http.Headers;
 
 namespace RentToGo_Finall
 {
-     class DetailsManager
+    class DetailsManager
     {
-        public static List<Customer> GetCustomerData()
-        {
-            var httpClient = new HttpClient();
-            var response = httpClient.GetStringAsync("http://10.0.2.2:65463/api/Customers");
-            var Customer_Data = JsonConvert.DeserializeObject<List<Customer>>(response.Result);
-            return Customer_Data.ToList();
-        }
+        /* public static List<Customer> GetCustomerData()
+      {
+          var httpClient = new HttpClient();
+          var response = httpClient.GetStringAsync("http://10.0.2.2:65463/api/Customers");
+          var Customer_Data = JsonConvert.DeserializeObject<List<Customer>>(response.Result);
+          return Customer_Data.ToList();
+      } */
         public static List<Property> GetPropertyData()
         {
             var httpClient = new HttpClient();
@@ -38,7 +38,6 @@ namespace RentToGo_Finall
             var Agent_Data = JsonConvert.DeserializeObject<List<Agent>>(response.Result);
             return Agent_Data.ToList();
         }
-
         public static void registercustomer(string username, string name, string phn, string address, string pass)
         {
             try
@@ -49,7 +48,7 @@ namespace RentToGo_Finall
                     CustName = name,
                     CustPhnNumber = Int32.Parse(phn),
                     CustAddress = address,
-                    CustPassword=pass
+                    CustPassword = pass
                 };
                 var httpClient = new HttpClient();
                 var Json = JsonConvert.SerializeObject(Customer_Data);
@@ -63,7 +62,7 @@ namespace RentToGo_Finall
             }
 
         }
-        public static void editcustomer(string username, string name, string phn, string address)
+        public static void editcustomer(string username, string name, int phn, string address, string pass)
         {
             try
             {
@@ -71,8 +70,9 @@ namespace RentToGo_Finall
                 {
                     CustUsername = username,
                     CustName = name,
-                    CustPhnNumber = Int32.Parse(phn),
-                    CustAddress = address
+                    CustPhnNumber = phn,
+                    CustAddress = address,
+                    CustPassword = pass
                 };
                 var httpClient = new HttpClient();
                 var Json = JsonConvert.SerializeObject(Customer_Data);

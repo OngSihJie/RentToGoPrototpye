@@ -51,8 +51,5 @@ using RentToGo_Finall.Models;
             view.FindViewById<TextView>(Resource.Id.propRent).Text = item.PropertyRent.ToString();
             return view;
         }
-        
-
-    
-}
+    }
 }

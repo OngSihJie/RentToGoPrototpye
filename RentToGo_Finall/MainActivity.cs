@@ -6,7 +6,6 @@ using AndroidX.AppCompat.App;
 using System.Collections.Generic;
 using RentToGo_Finall.Models;
 using Android.Content;
-using Android.Views;
 
 namespace RentToGo_Finall
 {
@@ -15,6 +14,7 @@ namespace RentToGo_Finall
     {
         ListView PropertyList;
         List<Property> mylist = new List<Property>();
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -41,23 +41,6 @@ namespace RentToGo_Finall
 
             StartActivity(View_Property);
 
-        }
-        public override bool OnCreateOptionsMenu(IMenu menu)
-        {
-            menu.Add("Customer Profile");
-            return base.OnPrepareOptionsMenu(menu);
-        }
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            var itemTitle = item.TitleFormatted.ToString();
-
-            switch (itemTitle)
-            {
-                case "Add Student":
-                    StartActivity(typeof(EditCustomer));
-                    break;
-            }
-            return base.OnOptionsItemSelected(item);
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
