@@ -20,6 +20,7 @@ namespace RentToGo_Finall
         {
             this.context = context;
             this.agentdetail = agentdetail;
+
         }
         public override Agent this[int position]
         {
@@ -44,11 +45,12 @@ namespace RentToGo_Finall
             var item = agentdetail[position];
             var view = convertView;
             if (view == null) // no view to re-use, create new
-                view = context.LayoutInflater.Inflate(Resource.Layout.AgentProfile, null);
-            view.FindViewById<TextView>(Resource.Id.agentname).Text = item.AgentName;
-            view.FindViewById<TextView>(Resource.Id.agentemail).Text = item.AgentEmail;
-            view.FindViewById<TextView>(Resource.Id.agentphn).Text = item.AgentPhnNumber.ToString();
+                view = context.LayoutInflater.Inflate(Resource.Layout.DisplayAgentLayout, null);
+            view.FindViewById<TextView>(Resource.Id.lblName).Text = item.AgentName;
+            view.FindViewById<TextView>(Resource.Id.lblEmail).Text = item.AgentEmail;
+            view.FindViewById<TextView>(Resource.Id.lblMobile).Text = item.AgentPhnNumber.ToString();
             return view;
+
         }
     }
 }
