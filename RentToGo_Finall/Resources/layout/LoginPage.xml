@@ -8,37 +8,43 @@
             android:layout_height="wrap_content"
         android:text="RentToGo"
         android:textAlignment="center"
+        android:textSize="28sp"
+        android:layout_margin="15dp" 
         android:id="@+id/textView1"/>
 
        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enter Username: "
-            android:paddingLeft="7dip"
+            android:paddingLeft="16dip"
             android:id="@+id/textView2"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+        android:layout_margin="13dp"
             android:id="@+id/lgnusername"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enter Password: "
-            android:paddingLeft="7dip"
+            android:paddingLeft="16dip"
             android:id="@+id/textView3"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+                android:layout_margin="13dp" 
             android:id="@+id/lgnpassword"/>
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:text="LOGIN"
+            android:layout_gravity="center_horizontal"
             android:id="@+id/btnlogin"/>
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:text="Create new account"
+            android:layout_gravity="center_horizontal"
             android:id="@+id/btnregister"/>
       
 </LinearLayout>
