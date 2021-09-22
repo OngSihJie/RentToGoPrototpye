@@ -56,17 +56,17 @@ namespace RentToGo_Finall
 
         private void Btn_AgentOffice_Click(object sender, EventArgs e)
         {
-            //var txtLat= Intent.GetStringExtra("Agent_Office_Location");
+            var txtLat = Intent.GetStringExtra("Agent_Office_Location");
 
-            //var address = "920 N. Parish Place, Burbank, CA 91506";
-            //var locationService = new GoogleLocationService();
-            //var point = locationService.GetLatLongFromAddress(address);
-            //var latitude = point.Latitude;
-            //var longitude = point.Longitude;
-            //var geoUri = Android.Net.Uri.Parse("geo:" + latitude + ", "+ longitude);
+            var address = "920 N. Parish Place, Burbank, CA 91506";
+            var locationService = new GoogleLocationService();
+            var point = locationService.GetLatLongFromAddress(address);
+            var latitude = point.Latitude;
+            var longitude = point.Longitude;
+            var geoUri = Android.Net.Uri.Parse("geo:" + latitude + ", " + longitude);
 
-            //var mapIntent = new Intent(Intent.ActionView, geoUri);
-            //StartActivity(mapIntent);
+            var mapIntent = new Intent(Intent.ActionView, geoUri);
+            StartActivity(mapIntent);
         }
 
         private void Btn_SMS_Click(object sender, EventArgs e)
