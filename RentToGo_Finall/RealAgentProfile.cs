@@ -66,7 +66,7 @@ namespace RentToGo_Finall
             //var geoUri = Android.Net.Uri.Parse("geo:" + latitude + ", "+ longitude);
 
             //var mapIntent = new Intent(Intent.ActionView, geoUri);
-            StartActivity(mapIntent);
+            //StartActivity(mapIntent);
         }
 
         private void Btn_SMS_Click(object sender, EventArgs e)
