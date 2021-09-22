@@ -12,6 +12,8 @@ using RentToGo_Finall.Models;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Net;
+using System.IO;
 
 namespace RentToGo_Finall
 {
@@ -79,14 +81,30 @@ namespace RentToGo_Finall
                 HttpContent httpContent = new StringContent(Json);
                 httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/Json");
                 httpClient.PutAsync(string.Format("http://10.0.2.2:53917/api/Customers/{0}", username), httpContent);
-
-
             }
             catch (Exception e)
             {
                 Console.WriteLine("Insert data error" + e.Message);
             }
 
+        }
+        public static string Get(string url)
+        {
+            string response = "";
+
+            var httpWebRequest = new HttpWebRequest(new Uri(url));
+            httpWebRequest.ServerCertificateValidationCallback = delegate { return true; };
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "GET";
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            if (httpResponse.StatusCode == HttpStatusCode.OK)
+            {
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    response = streamReader.ReadToEnd();
+                }
+            }
+            return response;
         }
     }
 }
