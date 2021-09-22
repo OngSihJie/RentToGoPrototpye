@@ -60,6 +60,23 @@
             android:paddingLeft="7dip"    
             android:id="@+id/agentphn"/>
         </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"> 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Office location: "
+            android:paddingLeft="7dip"
+            android:id="@+id/agent_ofice_location"/>
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="agent office location"
+            android:paddingLeft="7dip"    
+            android:id="@+id/agentofficelocation"/>
+        </LinearLayout>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,5 +92,18 @@
         android:layout_height="wrap_content"
         android:text="Show Agent Office"
         android:id="@+id/agentoffice"/>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dip"
+        android:orientation="vertical">
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector"
+        android:id="@+id/listViewToShowProperty" />
+        </LinearLayout>
       
 </LinearLayout>

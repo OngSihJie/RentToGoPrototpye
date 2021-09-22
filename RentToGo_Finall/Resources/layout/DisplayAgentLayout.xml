@@ -34,10 +34,20 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:paddingTop="38dip"
-        android:paddingLeft="178dip"
+        android:paddingLeft="153dip"
         android:paddingBottom="6dip"
         android:textSize="15dip"
         android:text="Mobile"
+        android:textColor="#ff000003"/>
+    <TextView
+        android:id="@+id/lblOffice"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:paddingTop="38dip"
+        android:paddingLeft="270dip"
+        android:paddingBottom="6dip"
+        android:textSize="15dip"
+        android:text="Office"
         android:textColor="#ff000003"/>
            
      <ImageView

@@ -19,7 +19,7 @@ namespace RentToGo_Finall.Models
 
        public string AgentEmail { get; set; }
 
-        public int AgentPhnNumber { get; set; }
+        public string AgentPhnNumber { get; set; }
 
         public string AgentOffice { get; set; }
     }

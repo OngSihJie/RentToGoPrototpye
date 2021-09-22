@@ -31,9 +31,12 @@ namespace RentToGo_Finall
         }
        public void OnLgnClick(object sender, EventArgs e)
         {
-            var agentprofile = new Intent(this, typeof(AgentProfile));
+            var mainpage = new Intent(this, typeof(MainPage));
 
-            StartActivity(agentprofile);
+            StartActivity(mainpage);
+            //var agentprofile = new Intent(this, typeof(AgentProfile));
+
+            //StartActivity(agentprofile);
 
         }
         public void OnButtonClick(object sender, EventArgs e)

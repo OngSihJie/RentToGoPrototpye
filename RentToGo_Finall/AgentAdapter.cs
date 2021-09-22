@@ -48,7 +48,8 @@ namespace RentToGo_Finall
                 view = context.LayoutInflater.Inflate(Resource.Layout.DisplayAgentLayout, null);
             view.FindViewById<TextView>(Resource.Id.lblName).Text = item.AgentName;
             view.FindViewById<TextView>(Resource.Id.lblEmail).Text = item.AgentEmail;
-            view.FindViewById<TextView>(Resource.Id.lblMobile).Text = item.AgentPhnNumber.ToString();
+            view.FindViewById<TextView>(Resource.Id.lblOffice).Text = item.AgentOffice;
+            view.FindViewById<TextView>(Resource.Id.lblMobile).Text = item.AgentPhnNumber;
             return view;
 
         }
